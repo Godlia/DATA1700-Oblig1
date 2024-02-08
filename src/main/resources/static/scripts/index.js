@@ -3,6 +3,7 @@ let ticketarr = [];
 let ticketView = document.querySelector(".billetter");
 document.querySelector("#deleteall").addEventListener("click", emptyTickets);
 
+
 //set to global scope
 let filmvalg;
 let antall;
@@ -90,7 +91,7 @@ function showErrors(errorlist) {
 function updateView() {
     let out = "";
     out += "\n" +
-        "    <tr>\n" +
+        "    <tr class='bolder'>\n" +
         "        <td>Film</td>\n" +
         "        <td>Antall</td>\n" +
         "        <td>Fornavn</td>\n" +
@@ -110,7 +111,7 @@ function updateView() {
         out += "</tr>";
     })
 
-    ticketView.innerHTML = out;
+    ticketView.innerHTML = out
 }
 
 function addTicket() {
@@ -131,7 +132,6 @@ function purchase() {
     valElements = [filmvalg, antall, fornavn, etternavn, telefonnr, epost];
     //get the errors
     let errors = validateInput();
-    console.log(errors);
 
     //if no errors, go ahead
     if(errors.length === 0) {
@@ -145,4 +145,5 @@ function purchase() {
 
 }
 
+//når all koden har kjørt så laster vi tabellen (tilfelle man bruker cookies for å lagre/hente arrayen senere)
 updateView();
