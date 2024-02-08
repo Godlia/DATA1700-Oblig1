@@ -1,2 +1,9 @@
 .site-wrapper {
 }
+
+#infotable tr td:nth-child(3) {
+    color: red;
+}
+span {
+    color: red;
+}
