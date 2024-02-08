@@ -6,10 +6,18 @@
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
+
+
 <h1>Bestilling av kinobilletter</h1>
+
+
 <label for="valg">Velg film</label><select name="" id="valg">
     <option value="">Velg Film</option>
+    <option value="titanic">Titanic</option>
 </select>
+
+
+
 <br> <br>
 
 <div>
@@ -21,7 +29,7 @@
     <tr class="fornavnRad">
         <td><label for="fornavn">Fornavn</label></td>
         <td><input type="text" name="" id="fornavn"></td>
-        <td></td>
+        <td>a</td>
     </tr>
     <tr class="etternavnRad">
         <td><label for="etternavn">Etternavn</label></td>
@@ -39,20 +47,12 @@
         <td></td>
     </tr>
 </table>
-<input type="submit" value="Kjøp billett">
+<input type="submit" id="purchase" value="Kjøp billett">
 
 
 <h1>Alle billetter</h1>
 
 <table class="billetter">
-    <tr>
-        <td>Film</td>
-        <td>Antall</td>
-        <td>Fornavn</td>
-        <td>Etternavn</td>
-        <td>Telefonnummer</td>
-        <td>E-Post</td>
-    </tr>
 </table>
 <input type="submit" value="Slett alle billettene">
 
