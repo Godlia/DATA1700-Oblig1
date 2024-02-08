@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Billetbestilling</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
+<h1>Bestilling av kinobilletter</h1>
+<label for="valg">Velg film</label><select name="" id="valg">
+    <option value="">Velg Film</option>
+</select>
+<br> <br>
+
+<div>
+    <label for="antall">Antall</label> <input type="number" name="" id="antall"> <span id="antallMsg"></span>
+</div>
+
+<br>
+<table id="infotable">
+    <tr class="fornavnRad">
+        <td><label for="fornavn">Fornavn</label></td>
+        <td><input type="text" name="" id="fornavn"></td>
+        <td></td>
+    </tr>
+    <tr class="etternavnRad">
+        <td><label for="etternavn">Etternavn</label></td>
+        <td><input type="text" name="" id="etternavn"></td>
+        <td></td>
+    </tr>
+    <tr class="telefonRad">
+        <td><label for="telefonnr">Telefonnummer</label></td>
+        <td><input type="text" name="" id="telefonnr"></td>
+        <td></td>
+    </tr>
+    <tr class="epostRad">
+        <td><label for="epost">E-Post</label>
+        <td><input type="text" name="" id="epost"></td>
+        <td></td>
+    </tr>
+</table>
+<input type="submit" value="Kjøp billett">
+
+
+<h1>Alle billetter</h1>
+
+<table class="billetter">
+    <tr>
+        <td>Film</td>
+        <td>Antall</td>
+        <td>Fornavn</td>
+        <td>Etternavn</td>
+        <td>Telefonnummer</td>
+        <td>E-Post</td>
+    </tr>
+</table>
+<input type="submit" value="Slett alle billettene">
 
 </body>
+<script src="./scripts/index.js"></script>
 </html>
