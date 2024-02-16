@@ -9,3 +9,4 @@ It is only local and only meant to showcase its functionality.
 * Javascript DOM manipulation
 * Loops, if's and switches
 
+To view website, either open index.html as a normal static webpage, deploy it through MAVEN or use IntelliJ's spring dev tools
