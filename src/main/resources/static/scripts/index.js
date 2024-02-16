@@ -3,6 +3,9 @@ let ticketarr = [];
 let ticketView = document.querySelector(".billetter");
 document.querySelector("#deleteall").addEventListener("click", emptyTickets);
 
+let tlfRegEx = new RegExp(/^[0-9]{8}$/);
+let epostRegEx = new RegExp(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/)
+
 
 //set to global scope
 let filmvalg;
@@ -41,10 +44,11 @@ function validateInput() {
     //check for empty strings
     if(fornavn === "") errorlist.push("fornavn");
     if(etternavn === "") errorlist.push("etternavn");
+
     //check is the phonenumber is 8 digits (norwegian number)
-    if(telefonnr.toString().length !== 8) errorlist.push("telefonnr");
+    if(!tlfRegEx.test(telefonnr)) errorlist.push("telefonnr");
     //email must atleast contain an @
-    if(!epost.toString().includes("@")) errorlist.push("epost");
+    if(!epostRegEx.test(epost)) errorlist.push("epost");
     return errorlist;
 }
 
@@ -60,7 +64,6 @@ function clearErrors() {
 }
 function showErrors(errorlist) {
     clearErrors();
-    console.log(errorlist);
     errorlist.forEach((item) => {
         switch (item) {
             case 'valg':
