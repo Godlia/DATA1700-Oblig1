@@ -1,4 +1,5 @@
 # Data1700 - Oblig1
+## By Eirik H. Kristoffersen, StudentID: eikri1709
 This is a simple static spring boot website simulating a ticket ordering system.
 It is only local and only meant to showcase its functionality.
 
